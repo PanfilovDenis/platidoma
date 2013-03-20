@@ -1,13 +1,12 @@
 module Platidoma
   
   class Client 
-    attr_accessor :shop_id, :login, :gate_password, :url
+    attr_accessor :shop_id, :login, :gate_password
 
     def initialize(args)
       self.shop_id = args[:shop_id]
       self.login = args[:login]
       self.gate_password = args[:gate_password]
-      self.url = args[:url]
     end
     
     def build_payment_sign(args)
@@ -39,7 +38,7 @@ module Platidoma
       uri = ::Addressable::URI.new
       uri.query_values = params
 
-      "https://#{Platidoma.configuration.host}?#{uri.query}"
+      "https://#{Platidoma.configuration.host}/payment.php?#{uri.query}"
     
     end
 
