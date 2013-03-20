@@ -34,7 +34,7 @@ class ClientTest < TestCase
     }
 
     url = @client.build_payment_url params
-    expected_url = "?pd_amount=1.00&pd_email=email&pd_login=test&pd_order_id=1&pd_rnd=rnd&pd_shop_id=1&pd_sign=sign"
+    expected_url = "https://#{Platidoma.configuration.host}?pd_amount=1.00&pd_email=email&pd_login=test&pd_order_id=1&pd_rnd=rnd&pd_shop_id=1&pd_sign=sign"
     assert_equal expected_url, url
 
   end

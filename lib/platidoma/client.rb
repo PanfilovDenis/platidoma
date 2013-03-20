@@ -39,7 +39,7 @@ module Platidoma
       uri = ::Addressable::URI.new
       uri.query_values = params
 
-      "#{url}?#{uri.query}"
+      "https://#{Platidoma.configuration.host}?#{uri.query}"
     
     end
 
