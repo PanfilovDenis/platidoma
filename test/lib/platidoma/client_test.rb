@@ -2,6 +2,10 @@ require 'test_helper'
 
 class ClientTest < TestCase
   def setup
+    Platidoma.configure do |config|
+      config.host = 'pg-test.platidoma.ru'
+    end
+
     @stub = stub_request(:post, "https://pg-test.platidoma.ru/status.php").
       with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
       to_return(:status => 200, :body => load_fixture('response.xml'), :headers => {})
