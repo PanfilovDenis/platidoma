@@ -1,0 +1,14 @@
+<transaction>
+  <pd_trans_id>14</pd_trans_id>
+  <pd_order_id>123</pd_order_id>
+  <pd_amount>120.56</pd_amount>
+  <pd_status>paid</pd_status>
+  <pd_payment_number>77260</pd_payment_number>
+  <pd_auth_code>391650</pd_auth_code>
+  <pd_rnd>z7K0gSp0</pd_rnd>
+  <pd_sign>58ceeaa86f761f31af52036a4fb77660</pd_sign>
+  <pd_creation_time>2011-12-13 16:46:20</pd_creation_time>
+  <pd_paid_time>2011-12-13 16:46:48</pd_paid_time>
+  <pd_reversed_time></pd_reversed_time>
+  <pd_declined_time></pd_declined_time>
+</transaction>
